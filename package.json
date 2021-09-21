@@ -1,0 +1,25 @@
+{
+  "name": "rese-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@nuxtjs/auth-next": "^5.0.0-1624817847.21691f1",
+    "@nuxtjs/axios": "^5.13.6",
+    "core-js": "^3.15.1",
+    "nuxt": "^2.15.7",
+    "nuxt-fontawesome": "^0.4.0",
+    "vee-validate": "^3.4.11",
+    "vue-ctk-date-time-picker": "^2.5.0",
+    "vue-js-modal": "^2.0.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/moment": "^1.6.1"
+  }
+}
