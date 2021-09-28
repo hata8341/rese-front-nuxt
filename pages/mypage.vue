@@ -47,7 +47,11 @@
             </div>
           </div>
           <div class="reserve-content-right">
-            <button class="reserve-change" @click="show(index)">予約変更</button>
+            <button
+            class="reserve-change"
+            @click="show(index)"
+            >予約変更
+            </button>
             <modal
             :name="index.toString()"
             :width="'90%'"
@@ -64,7 +68,7 @@
                       <VueCtkDateTimePicker
                       label="日付を選択"
                       v-model="dateSelected"
-                      @input="getDisableHours(reserve.store_id)"
+                      @input="getReservedDatetime(reserve.store_id)"
                       format="YYYY-MM-DD"
                       formatted="YYYY-MM-DD"
                       :min-date="startDate"
@@ -197,12 +201,12 @@ export default {
       reserves:[],
       myStores:[],
       userId:null,
-      dateSelected:null,
-      timeSelected:null,
-      numberSelected:'',
-      numberOptions: [
-      ],
-      disableHours:[]
+      // dateSelected:null,
+      // timeSelected:null,
+      // numberSelected:'',
+      // numberOptions: [
+      // ],
+      // disableHours:[]
     }
   },
   methods: {
@@ -295,47 +299,14 @@ export default {
       }
       this.myStores = stores;
     },
-    async getDateTime(storeId) {
-      console.log(storeId);
-      console.log(this.dateSelected);
-      // const date = this.$moment().format('YYYY-MM-DD');
-      const date = this.dateSelected;
-      const resData = await this.$axios.$get("/reserveDatetime/",
+    async getReservedDatetime(storeId) {
+      const sendDate = this.dateSelected;
+      console.log(sendDate);
+      this.$store.dispatch('getReservedDatetime',
       {
-        params:{
-          store_id: storeId,
-          date:date,
-        }
+        store_id: storeId,
+        sendDate: sendDate,
       });
-      const reserves = resData.data;
-      console.log(reserves);
-      return reserves;
-    },
-    reserveHours(reserves){
-      let reserveHours = [];
-      for (let i = 0; i < reserves.length; i++) {
-        reserveHours[i] = this.$moment(reserves[i].datetime).format('HH');
-      }
-      return reserveHours;
-    },
-    setDisableHours(reserveHours){
-      const startHour = this.$moment().startOf('date');
-      const endHour = this.$moment();
-      let beforeSalesTimes = [];
-      for (let hour = startHour; hour <= endHour; hour = hour.add(1,'hour')) {
-        beforeSalesTimes.push(hour.format('HH'));
-      }
-      const setDisableHours = beforeSalesTimes.concat(reserveHours);
-      return setDisableHours;
-    },
-    async getDisableHours(storeId) {
-      let reserves = await this.getDateTime(storeId);
-      let reserveHours = await this.reserveHours(reserves);
-      this.disableHours = await this.setDisableHours(reserveHours)
-      // if (this.dateSelected === null) {
-      //   this.timeSelected === null;
-      //   this.numberSelected === '';
-      // };
     },
     getUser() {
       this.userId = this.$auth.user.id;
@@ -356,6 +327,9 @@ export default {
       } else {
         return 'modal-reserve-content';
       }
+    },
+    disableHours() {
+      return this.$store.getters.gettersReservedDatetime;
     }
   },
   async created() {
@@ -365,11 +339,6 @@ export default {
     let stores = await this.getMyStore();
     await this.getHasLike(stores);
   },
-  // async mounted() {
-  //   let reserves = await this.getDateTime();
-  //   let reserveHours = await this.reserveHours(reserves);
-  //   await this.setDisableHours(reserveHours);
-  // }
 }
 </script>
 

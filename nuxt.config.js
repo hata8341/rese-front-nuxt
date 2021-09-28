@@ -35,7 +35,10 @@ export default {
       src: '@/plugins/plugin',
       mode:'client'
     },
-    { src: '@/plugins/main.js'}
+    { src: '@/plugins/main.js' },
+    { src: '@/plugins/star-rating.js' },
+    { src: '@/plugins/moment' },
+    '@/plugins/mixin',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
