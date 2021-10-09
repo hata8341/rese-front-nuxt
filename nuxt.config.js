@@ -1,5 +1,8 @@
 const ENV = require('dotenv').config().parsed;
 const { NODE_ENV, API_URL } = process.env;
+const PORT = process.env.PORT || 3000; app.listen(PORT, () => {
+   console.log(`Server is listening on port ${PORT}`);
+});
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
