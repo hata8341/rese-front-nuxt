@@ -33,7 +33,7 @@
                 :disabled="ObserverProps.invalid || !ObserverProps.validated"
                 >登録</button>
       </div>
-        <p v-show="ObserverProps" class="invalid">
+        <p v-show="ObserverProps.invalid || !ObserverProps.validated" class="invalid">
           全ての項目を入力すると登録できます
           </p>
       </validation-observer>

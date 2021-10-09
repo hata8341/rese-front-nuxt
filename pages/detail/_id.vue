@@ -137,11 +137,8 @@
 </template>
 
 <script>
-// import ReviewMixin from '../plugins/reviewMixin.js'
-
 export default {
   layout: 'detail',
-  // mixins: [ReviewMixin],
   data() {
     return {
       userId: null,
@@ -230,7 +227,7 @@ export default {
 <style scoped>
 .container-2 {
   width: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
 }
@@ -253,7 +250,7 @@ export default {
   margin-right: 15px;
 }
 .img-wrap {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .img-wrap img {
   border-radius: 5px 5px 0 0;
@@ -262,6 +259,9 @@ export default {
 }
 .store-content {
   padding: 20px;
+}
+.area-genre {
+  margin: 15px 0;
 }
 .store-content p {
   display: inline-block;
@@ -272,7 +272,7 @@ export default {
 }
 .right {
   margin: 25px 0;
-  border: solid 1px blue;
+  /* border: solid 1px blue; */
   width: 47%;
   background: blue;
   border-radius: 5px;

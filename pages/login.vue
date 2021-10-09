@@ -25,7 +25,7 @@
                 :disabled="ObserverProps.invalid||!ObserverProps.validated"
                 >ログイン</button>
       </div>
-      <p v-show="ObserverProps" class="invalid">
+      <p v-show="ObserverProps.invalid || !ObserverProps.validated" class="invalid">
           全ての項目を入力するとログインできます
         </p>
       </validation-observer>

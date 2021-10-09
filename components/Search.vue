@@ -60,16 +60,23 @@ export default {
 <style>
 .search {
   display: flex;
+  justify-content: flex-end;
+  width: 95%;
+  /* border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff; */
+  height: 42px;
+}
+.search-content {
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fff;
-  height: 42px;
 }
 .search-content select{
 	display: inline-block;
 	margin-right: 0;
 	padding: 10px;
-	width: 150px;
+	width: 100%;
+	/* width: 150px; */
 	height: 40px;
 	font-size: 100%;
 	box-sizing: border-box;
@@ -91,12 +98,17 @@ export default {
 	border: none;
 	background: #fff;
 }
+.search-keyword {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 .search-keyword input {
   -webkit-appearance: none;
 	display: inline-block;
 	margin-right: 0;
 	padding: 10px;
-	width: 250px;
+	/* width: 250px; */
+	width: 100%;
 	height: 40px;
 	font-size: 100%;
 	box-sizing: border-box;

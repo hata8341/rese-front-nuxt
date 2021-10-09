@@ -4,19 +4,19 @@
     <nav class="nav" v-show="nav">
       <ul>
       <li>
-        <NuxtLink to="/">ホームへ</NuxtLink>
+        <NuxtLink to="/"><span @click="navOpen" :class="{'open':active}">ホームへ</span></NuxtLink>
         </li>
       <li v-if="!$auth.loggedIn">
-        <NuxtLink to="/register">新規登録へ</NuxtLink>
+        <NuxtLink to="/register"><span @click="navOpen" :class="{'open':active}">新規登録へ</span></NuxtLink>
         </li>
       <li v-else>
-        <a @click="logout">ログアウト</a>
+        <a @click="logout"><span @click="navOpen" :class="{'open':active}">ログアウト</span></a>
         </li>
       <li v-if="!$auth.loggedIn">
-        <NuxtLink to="/login">ログイン画面へ</NuxtLink>
+        <NuxtLink to="/login"><span @click="navOpen" :class="{'open':active}">ログイン画面へ</span></NuxtLink>
         </li>
       <li v-else>
-        <NuxtLink to="/mypage">マイページへ</NuxtLink>
+        <NuxtLink to="/mypage"><span @click="navOpen" :class="{'open':active}">マイページへ</span></NuxtLink>
         </li>
       </ul>
     </nav>
@@ -46,6 +46,18 @@ export default {
       this.active = !this.active;
       this.nav = !this.nav;
     },
+    // toHome() {
+    //   this.$router.push("/");
+    // },
+    // toRegister() {
+    //   this.$router.push("/register");
+    // },
+    // toLogin() {
+    //   this.$router.push("/login");
+    // },
+    // toMypage() {
+    //   this.$router.push("/mypage");
+    // },
     async logout() {
       try {
         await this.$auth.logout();
@@ -59,6 +71,7 @@ export default {
 </script>
 <style scoped>
 a{
+  cursor: pointer;
   text-decoration: none;
   color: blue
 }
@@ -66,6 +79,7 @@ a{
   position: absolute;
   height: 100vh;
   width: 100%;
+  top: 0%;
   left: 0%;
   background: #eee;
   text-align: center;

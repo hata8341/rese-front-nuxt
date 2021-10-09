@@ -84,7 +84,7 @@
                       v-model="timeSelected"
                       format="HH:mm"
                       formatted="HH:mm"
-                      minute-interval="60"
+                      minute-interval="30"
                       :disabled-hours="disableHours"
                       :overlay="true"
                       only-time
@@ -414,7 +414,7 @@ export default {
   width: 50%;
 }
 .reserve-change {
-  width: 100px;
+  width: 5.5rem;
   text-align: center;
   padding: 8px 0 10px;
   color: #000;
@@ -425,7 +425,7 @@ export default {
   margin: 20px 0px 0px 41px;
 }
 .reserve-delete {
-  width: 100px;
+  width: 5.5rem;
   text-align: center;
   padding: 8px 0 10px;
   color: #000;
