@@ -1,4 +1,5 @@
 const ENV = require('dotenv').config().parsed;
+const { NODE_ENV, API_URL } = process.env;
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -62,9 +63,14 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  env:ENV,
+  env: {
+    NODE_ENV,
+    API_URL,
+    ENV
+  },
   axios: {
-    baseURL:ENV.API_BASE_URL,
+    // baseURL:ENV.API_BASE_URL,
+    baseURL:process.env.API_URL,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
