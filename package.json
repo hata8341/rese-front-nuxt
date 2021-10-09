@@ -6,7 +6,7 @@
     "setup": "yarn",
     "dev": "nuxt",
     "build": "nuxt build",
-    "generate": "npm run generate",
+    "generate": "nuxt generate",
     "start": "nuxt start",
     "heroku-postbuild": "npm run build"
   },
