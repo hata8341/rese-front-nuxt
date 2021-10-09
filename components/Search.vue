@@ -24,7 +24,7 @@
         </select>
     </div>
     <div class="search-keyword">
-        <img src="../assets/img/虫眼鏡の無料アイコン8.png" alt="検索アイコンです" class="search-img">
+        <font-awesome-icon icon="search" class="icon" />
         <input
         name="keyword"
         placeholder="キーワード"
@@ -113,5 +113,9 @@ export default {
 	font-size: 100%;
 	box-sizing: border-box;
 	border: none;
+}
+.icon {
+  font-size: 40px;
+  background-color: white;
 }
 </style>
