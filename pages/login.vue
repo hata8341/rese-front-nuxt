@@ -7,7 +7,7 @@
       <validation-observer ref="obs" v-slot="ObserverProps">
       <validation-provider v-slot="{errors}" rules="required">
         <div class="list">
-          <img src="~assets/img/シンプルなメールのアイコン素材 2.png" alt="メールアドレスのアイコンです">
+          <font-awesome-icon icon="envelope" class="icon" />
           <input type="email" v-model="email" name="メールアドレス" placeholder="メールアドレス">
         </div>
         <div class="error">{{errors[0]}}</div>
@@ -15,7 +15,7 @@
 
       <validation-provider v-slot="{errors}" rules="required|min:8">
         <div class="list">
-          <img src="~assets/img/鍵・錠の無料アイコン素材 1.png" alt="パスワードのアイコンです">
+          <font-awesome-icon icon="lock" class="icon" />
           <input type="password" v-model="password" name="パスワード" placeholder="パスワード">
         </div>
         <div class="error">{{errors[0]}}</div>
@@ -119,5 +119,9 @@ export default {
     text-align: center;
     margin-bottom: 15px;
     border-radius: 0 0 5px 5px;
+  }
+  .icon {
+    font-size: 50px;
+    margin-top: 6px;
   }
 </style>
