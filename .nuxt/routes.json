@@ -1,0 +1,51 @@
+[
+  {
+    "name": "done",
+    "path": "/done",
+    "component": "/Users/hatanotaisuke/Desktop/rese-nuxt_laravel/rese-frontend/pages/done.vue",
+    "chunkName": "pages/done",
+    "_name": "_5b807615"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "/Users/hatanotaisuke/Desktop/rese-nuxt_laravel/rese-frontend/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_4e9eb3e6"
+  },
+  {
+    "name": "mypage",
+    "path": "/mypage",
+    "component": "/Users/hatanotaisuke/Desktop/rese-nuxt_laravel/rese-frontend/pages/mypage.vue",
+    "chunkName": "pages/mypage",
+    "_name": "_3adab58e"
+  },
+  {
+    "name": "register",
+    "path": "/register",
+    "component": "/Users/hatanotaisuke/Desktop/rese-nuxt_laravel/rese-frontend/pages/register.vue",
+    "chunkName": "pages/register",
+    "_name": "_568bd994"
+  },
+  {
+    "name": "thanks",
+    "path": "/thanks",
+    "component": "/Users/hatanotaisuke/Desktop/rese-nuxt_laravel/rese-frontend/pages/thanks.vue",
+    "chunkName": "pages/thanks",
+    "_name": "_9d2d09c8"
+  },
+  {
+    "name": "detail-id",
+    "path": "/detail/:id?",
+    "component": "/Users/hatanotaisuke/Desktop/rese-nuxt_laravel/rese-frontend/pages/detail/_id.vue",
+    "chunkName": "pages/detail/_id",
+    "_name": "_5139744f"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/hatanotaisuke/Desktop/rese-nuxt_laravel/rese-frontend/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_f611de62"
+  }
+]

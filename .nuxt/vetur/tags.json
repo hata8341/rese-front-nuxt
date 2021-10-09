@@ -1,0 +1,23 @@
+{
+  "Card": {
+    "description": "Auto imported from components/Card.vue"
+  },
+  "Header": {
+    "description": "Auto imported from components/Header.vue"
+  },
+  "NuxtLogo": {
+    "description": "Auto imported from components/NuxtLogo.vue"
+  },
+  "ReviewCard": {
+    "description": "Auto imported from components/ReviewCard.vue"
+  },
+  "ReviewModal": {
+    "description": "Auto imported from components/ReviewModal.vue"
+  },
+  "Search": {
+    "description": "Auto imported from components/Search.vue"
+  },
+  "Tutorial": {
+    "description": "Auto imported from components/Tutorial.vue"
+  }
+}
