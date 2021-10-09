@@ -7,7 +7,7 @@
       <validation-observer ref="obs" v-slot="ObserverProps">
       <validation-provider v-slot="{errors}" rules="required">
         <div class="list">
-          <img src="../assets/img/シンプルなメールのアイコン素材 2.png" alt="メールアドレスのアイコンです">
+          <img src="~assets/img/シンプルなメールのアイコン素材 2.png" alt="メールアドレスのアイコンです">
           <input type="email" v-model="email" name="メールアドレス" placeholder="メールアドレス">
         </div>
         <div class="error">{{errors[0]}}</div>
@@ -15,7 +15,7 @@
 
       <validation-provider v-slot="{errors}" rules="required|min:8">
         <div class="list">
-          <img src="../assets/img/鍵・錠の無料アイコン素材 1.png" alt="パスワードのアイコンです">
+          <img src="~assets/img/鍵・錠の無料アイコン素材 1.png" alt="パスワードのアイコンです">
           <input type="password" v-model="password" name="パスワード" placeholder="パスワード">
         </div>
         <div class="error">{{errors[0]}}</div>
