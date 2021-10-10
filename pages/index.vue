@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  // middleware:"auth",
+  middleware:"auth",
   name:"home",
   data() {
     return {
@@ -91,8 +91,7 @@ export default {
       console.log(stores);
     },
     getUser() {
-      // this.userId = this.$auth.user.id;
-      this.userId = 5;
+      this.userId = this.$auth.user.id;
     }
   },
   async created() {

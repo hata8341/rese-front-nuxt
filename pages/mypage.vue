@@ -274,7 +274,7 @@ export default {
       this.checkDeleteHide(index);
     },
     async getMyStore() {
-      const resData = await this.$axios.$get("/myLike/",
+      const resData = await this.$axios.$get("/myLike",
           {
             params: {
               user_id: this.userId,
