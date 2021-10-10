@@ -75,7 +75,7 @@ export default {
     async getHasLike(stores) {
       for (let i = 0; i < stores.length; i++) {
         console.log(stores[i]);
-        const resData = await this.$axios.get( "/like/",
+        const resData = await this.$axios.get( "/like",
           {
             params: {
               store_id: stores[i].id,
