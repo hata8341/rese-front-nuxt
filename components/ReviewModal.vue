@@ -114,7 +114,7 @@ export default {
       this.$modal.hide('review-content');
     },
     async toReview() {
-      const resData = await this.$axios.$get('/postedReview/',
+      const resData = await this.$axios.$get('/postedReview',
       {
         params: {
           user_id: this.$auth.user.id,
