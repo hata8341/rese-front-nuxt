@@ -79,12 +79,12 @@ export default {
       };
       if (!store.hasLike) {
         const resData = await this.$axios.post(
-          "/like/",data
+          "/like",data
         );
         this.storeData()[index].hasLike = resData.data.state;
       } else {
         const resData = await this.$axios.delete(
-          "/like/",{ data:data}
+          "/like",{ data:data}
         );
         this.storeData()[index].hasLike = resData.data.state;
       }

@@ -161,7 +161,7 @@ export default {
     },
     async getDetailStore() {
       const resData = await this.$axios.$get(
-        "/store/" + this.$route.params.id
+        "/store" + this.$route.params.id
         );
         this.store = resData.data[0];
     },
@@ -178,7 +178,7 @@ export default {
       });
       const checkReserve = resData.result;
       if (!checkReserve) {
-        await this.$axios.post("/reserve/",
+        await this.$axios.post("/reserve",
         {
           user_id: this.$auth.user.id,
           store_id: this.$route.params.id,
@@ -363,7 +363,6 @@ export default {
 .container-3 {
   width: 100%;
   padding-bottom: 20px;
-  border: 1px solid blue;
 }
 .review-info-wrap {
   text-align: center;
