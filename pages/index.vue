@@ -66,7 +66,7 @@ export default {
     },
     async getStore() {
       const resData = await this.$axios.get(
-          "/store/"
+          "/store"
       );
       console.log(resData.data.data);
       const stores = resData.data.data;
