@@ -566,4 +566,7 @@ export default {
   border-radius: 5px;
   cursor: pointer;
 }
+font-awesome-icon.clock {
+  background-color: mediumblue;
+}
 </style>

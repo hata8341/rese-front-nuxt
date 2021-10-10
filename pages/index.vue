@@ -102,7 +102,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .container {
   display: flex;
   justify-content: space-between;
@@ -113,9 +113,8 @@ export default {
   display: flex;
   justify-content: flex-end;
 }
-.clear {
-  width: 40px;
-  height: 40px;
+svg.clear {
+  font-size: 40px;
   cursor: pointer;
 }
 .all-card-wrap {

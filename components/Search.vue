@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .search {
   display: flex;
   justify-content: flex-end;
