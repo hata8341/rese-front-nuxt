@@ -161,7 +161,7 @@ export default {
     },
     async getDetailStore() {
       const resData = await this.$axios.$get(
-        "/store" + this.$route.params.id
+        "/store/" + this.$route.params.id
         );
         this.store = resData.data[0];
     },

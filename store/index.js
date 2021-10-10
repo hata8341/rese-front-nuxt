@@ -47,7 +47,7 @@ export const actions =
   },
 
   getReservedDatetime: async function ({ commit }, { store_id, sendDate }) {
-    const resData = await this.$axios.$get("/reservedDatetime/",
+    const resData = await this.$axios.$get("/reservedDatetime",
       {
         params: {
           store_id: store_id,
