@@ -69,11 +69,8 @@ export default {
     ENV
   },
   axios: {
-    // baseURL:ENV.API_BASE_URL,
-    baseURL:process.env.API_URL,
-  },
-  server: {
-    port: process.env.PORT || 3000,
+    baseURL:ENV.API_BASE_URL,
+    // baseURL:process.env.API_URL,
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
