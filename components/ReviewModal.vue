@@ -158,9 +158,6 @@ export default {
       });
     }
   },
-  // mounted() {
-  //   console.log(this.getReviews());
-  // }
 }
 </script>
 

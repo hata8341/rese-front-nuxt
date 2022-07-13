@@ -46,18 +46,6 @@ export default {
       this.active = !this.active;
       this.nav = !this.nav;
     },
-    // toHome() {
-    //   this.$router.push("/");
-    // },
-    // toRegister() {
-    //   this.$router.push("/register");
-    // },
-    // toLogin() {
-    //   this.$router.push("/login");
-    // },
-    // toMypage() {
-    //   this.$router.push("/mypage");
-    // },
     async logout() {
       try {
         await this.$auth.logout();

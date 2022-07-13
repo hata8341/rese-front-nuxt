@@ -2,7 +2,6 @@
   <div class="container">
     <div class="header-wrap">
       <Header />
-      <!-- <Search /> -->
     </div>
     <Nuxt />
   </div>
@@ -14,7 +13,6 @@ html {
 .container{
   max-width: 1200px;
   height: auto;
-  /* border: 1px solid red; */
   padding: 20px;
   margin: 0 auto;
 }

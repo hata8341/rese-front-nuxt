@@ -11,7 +11,6 @@ html {
 .container{
   max-width: 1200px;
   height: auto;
-  /* border: 1px solid red; */
   padding: 20px;
 }
 </style>

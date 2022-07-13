@@ -62,9 +62,6 @@ export default {
   display: flex;
   justify-content: flex-end;
   width: 95%;
-  /* border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff; */
   height: 42px;
 }
 .search-content {
@@ -76,7 +73,6 @@ export default {
 	margin-right: 0;
 	padding: 10px;
 	width: 100%;
-	/* width: 150px; */
 	height: 40px;
 	font-size: 100%;
 	box-sizing: border-box;
@@ -107,7 +103,6 @@ export default {
 	display: inline-block;
 	margin-right: 0;
 	padding: 10px;
-	/* width: 250px; */
 	width: 100%;
 	height: 40px;
 	font-size: 100%;

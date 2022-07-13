@@ -1,116 +1,72 @@
 <template>
   <div class="mypage-wrap">
     <div class="left">
-      <div
-      class="reserve-status">
+      <div class="reserve-status">
         <div class="reserve-title">
           <h2 class="reserve-ttl-dt">予約状況</h2>
         </div>
-        <div
-        class="reserve-content"
-        v-for="(reserve, index) in reserves"
-        :key="index"
-        >
-        <div class="reserve-number">
-        <font-awesome-icon icon="clock" class="icon clock" />
-        <h3 class="reserve-num-ttl">
-          予約{{index + 1}}
-        </h3>
-        </div>
-        <div class="reserve-content-wrap">
-          <div class="reserve-content-left">
-            <div class="reserve-table">
-              <tr class="reserve-list">
-                <th class="reserve-ttl">店名</th>
-                <td class="reserve-data">
-                  {{reserve.store.store_name}}
-                </td>
-              </tr>
-              <tr class="reserve-list">
-                <th class="reserve-ttl">日付</th>
-                <td class="reserve-data">
-                  {{ date(reserve.datetime)}}
-                </td>
-              </tr>
-              <tr class="reserve-list">
-                <th class="reserve-ttl">時間</th>
-                <td class="reserve-data">
-                  {{time(reserve.datetime)}}
-                </td>
-              </tr>
-              <tr class="reserve-list">
-                <th class="reserve-ttl">人数</th>
-                <td class="reserve-data">
-                  {{reserve.number}}名
-                </td>
-              </tr>
-            </div>
+        <div class="reserve-content" v-for="(reserve, index) in reserves" :key="index">
+          <div class="reserve-number">
+            <h3 class="reserve-num-ttl">
+              予約{{index + 1}}
+            </h3>
           </div>
-          <div class="reserve-content-right">
-            <button
-            class="reserve-change"
-            @click="show(index)"
-            >予約変更
-            </button>
-            <modal
-            :name="index.toString()"
-            :width="'90%'"
-            :height="'90%'"
-            :draggable="true"
-            :resizable="true"
-            >
-              <div class="change-reserve">
-                <h2>{{reserve.store.store_name}}</h2>
+          <div class="reserve-content-wrap">
+            <div class="reserve-content-left">
+              <div class="reserve-table">
+                <tr class="reserve-list">
+                  <th class="reserve-ttl">店名</th>
+                  <td class="reserve-data">
+                    {{reserve.store.store_name}}
+                  </td>
+                </tr>
+                <tr class="reserve-list">
+                  <th class="reserve-ttl">日付</th>
+                  <td class="reserve-data">
+                    {{ date(reserve.datetime)}}
+                  </td>
+                </tr>
+                <tr class="reserve-list">
+                  <th class="reserve-ttl">時間</th>
+                  <td class="reserve-data">
+                    {{time(reserve.datetime)}}
+                  </td>
+                </tr>
+                <tr class="reserve-list">
+                  <th class="reserve-ttl">人数</th>
+                  <td class="reserve-data">
+                    {{reserve.number}}名
+                  </td>
+                </tr>
               </div>
-              <div class="change-content">
-                <div class="reserve-input">
-                  <div class="reserve-input">
-                      <VueCtkDateTimePicker
-                      label="日付を選択"
-                      v-model="dateSelected"
-                      @input="getReservedDatetime(reserve.store_id)"
-                      format="YYYY-MM-DD"
-                      formatted="YYYY-MM-DD"
-                      :min-date="startDate"
-                      :max-date="endDate"
-                      :overlay="true"
-                      only-date
-                      />
-                  </div>
-                  <div class="reserve-input">
-                      <VueCtkDateTimePicker
-                      v-if="dateSelected"
-                      label="時間を選択"
-                      v-model="timeSelected"
-                      format="HH:mm"
-                      formatted="HH:mm"
-                      minute-interval="30"
-                      :disabled-hours="disableHours"
-                      :overlay="true"
-                      only-time
-                      />
-                  </div>
+            </div>
+            <div class="reserve-content-right">
+              <button class="reserve-change" @click="show(index)">予約変更
+              </button>
+              <modal :name="index.toString()" :width="'90%'" :height="'90%'" :draggable="true" :resizable="true">
+                <div class="change-reserve">
+                  <h2>{{reserve.store.store_name}}</h2>
                 </div>
-                  <div class="reserve-input"
-                  v-if="dateSelected && timeSelected"
-                  >
-                      <select
-                        name="number"
-                        class="reserve-number"
-                        v-model.number="numberSelected"
-                        required
-                      >
-                        <option
-                          value=""
-                          class="number-select">人数を選択</option>
-                        <option
-                          v-for="(option, index) in numberOptions"
-                          :key="index"
-                          :value="option"
-                        >
+                <div class="change-content">
+                  <div class="reserve-input">
+                    <div class="reserve-input">
+                      <VueCtkDateTimePicker label="日付を選択" v-model="dateSelected"
+                        @input="getReservedDatetime(reserve.store_id)" format="YYYY-MM-DD" formatted="YYYY-MM-DD"
+                        :min-date="startDate" :max-date="endDate" :overlay="true" only-date />
+                    </div>
+                    <div class="reserve-input">
+                      <VueCtkDateTimePicker v-if="dateSelected" label="時間を選択" v-model="timeSelected" format="HH:mm"
+                        formatted="HH:mm" minute-interval="30" :disabled-hours="disableHours" :overlay="true"
+                        only-time />
+                    </div>
+                  </div>
+                  <div class="reserve-input" v-if="dateSelected && timeSelected">
+                    <select name="number" class="reserve-number" v-model.number="numberSelected" required>
+                      <option value="" class="number-select">人数を選択</option>
+                      <option v-for="(option, index) in numberOptions" :key="index" :value="option">
                         {{option}}名
-                        </option>
-                      </select>
+                      </option>
+                    </select>
                   </div>
                   <div v-if="dateSelected||timeSelected||numberSelected" class="change-content-ttl">
                     <h2>予約変更内容</h2>
@@ -147,28 +103,24 @@
                         <td class="modal-reserve-data">{{reserve.number}}名</td>
                       </tr>
                     </div>
+                  </div>
+                  <button class="change-btn" @click="updateReserve(reserve.id,index)">変更</button>
+                  <button class="back-btn" @click="hide(index)">戻る</button>
                 </div>
-                <button class="change-btn" @click="updateReserve(reserve.id,index)">変更</button>
-                <button class="back-btn" @click="hide(index)">戻る</button>
-              </div>
-            </modal>
-            <button class="reserve-delete" @click="checkDelete(index)">予約取消</button>
-            <modal
-            :name="'reserve-delete'+index.toString()"
-            :draggable="true"
-            :resizable="true"
-            >
-              <div class="delete-check-ttl">
-                <h2>確認</h2>
-              </div>
-              <div class="delete-check-content">
-                <p>本当にご予約内容を取消してもよろしいでしょうか？</p>
-                <button class="delete-btn" @click="deleteReserve(reserve.id,index)">取消</button>
-                <button  class="delete-back-btn" @click="checkDeleteHide(index)">戻る</button>
-              </div>
-            </modal>
+              </modal>
+              <button class="reserve-delete" @click="checkDelete(index)">予約取消</button>
+              <modal :name="'reserve-delete'+index.toString()" :draggable="true" :resizable="true">
+                <div class="delete-check-ttl">
+                  <h2>確認</h2>
+                </div>
+                <div class="delete-check-content">
+                  <p>本当にご予約内容を取消してもよろしいでしょうか？</p>
+                  <button class="delete-btn" @click="deleteReserve(reserve.id,index)">取消</button>
+                  <button class="delete-back-btn" @click="checkDeleteHide(index)">戻る</button>
+                </div>
+              </modal>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
@@ -183,11 +135,7 @@
           <h2 class="like-store-ttl">お気に入り店舗</h2>
         </div>
         <div class="like-store-card">
-          <Card
-          :myStores="myStores"
-          :userId="userId"
-          :routeName="$route.name"
-          />
+          <Card :myStores="myStores" :userId="userId" :routeName="$route.name" />
         </div>
       </div>
     </div>
@@ -201,12 +149,6 @@ export default {
       reserves:[],
       myStores:[],
       userId:null,
-      // dateSelected:null,
-      // timeSelected:null,
-      // numberSelected:'',
-      // numberOptions: [
-      // ],
-      // disableHours:[]
     }
   },
   methods: {
@@ -345,7 +287,6 @@ export default {
 <style scoped>
 .mypage-wrap {
   width: 100%;
-  /* border: 1px solid green; */
   display: flex;
   justify-content: space-between;
 }
@@ -353,7 +294,6 @@ export default {
   margin-top: 50px;
   width: 47%;
   height: auto;
-  /* border: magenta solid 1px; */
 }
 .reserve-status {
   width: 100%;
@@ -437,7 +377,6 @@ export default {
 }
 .rigth {
   width: 47%;
-  /* border: mediumslateblue solid 1px; */
   margin-top: 15px;
 }
 .like-store-ttl {
@@ -534,7 +473,6 @@ export default {
   padding-right: 25px;
 }
 .modal-change-ttl {
-  /* font-weight: normal; */
   color: #fff;
   width: 25%;
   padding-right: 25px;

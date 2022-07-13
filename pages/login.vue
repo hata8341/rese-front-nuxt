@@ -21,7 +21,8 @@
         <div class="error">{{errors[0]}}</div>
       </validation-provider>
       <div class="button-wrap">
-        <button @click="login"
+        <button class="login-button"
+                @click="login"
                 :disabled="ObserverProps.invalid||!ObserverProps.validated"
                 >ログイン</button>
       </div>
@@ -29,6 +30,13 @@
           全ての項目を入力するとログインできます
         </p>
       </validation-observer>
+    </div>
+    <div class="guest-button-wrap">
+      <button class="guest-button"
+              @click="guestLogin"
+      >
+      <p>ゲストログイン</p>
+      </button>
     </div>
   </div>
 </template>
@@ -55,6 +63,19 @@ export default {
         alert("メールアドレスまたはパスワードが間違っております");
       }
     },
+    async guestLogin() {
+      try {
+        await this.$auth.loginWith("laravelJWT", {
+          data: {
+            email: "guest@gmail.com",
+            password: "guestguest",
+          },
+        });
+        this.$router.push("/");
+      } catch  {
+        alert("メールアドレスまたはパスワードが間違っております");
+      }
+    }
   },
 };
 </script>
@@ -65,6 +86,7 @@ export default {
     height: auto;
     margin-top: 80px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -102,7 +124,7 @@ export default {
     justify-content: flex-end;
     margin: 15px 0;
   }
-  button {
+  .login-button {
     width: 100px;
     text-align: center;
     padding: 8px 0 10px;
@@ -123,5 +145,15 @@ export default {
   .icon {
     font-size: 50px;
     margin-top: 6px;
+  }
+  .guest-button{
+    margin-top: 3rem;
+    width: 120px;
+    text-align: center;
+    padding: 8px 0 10px;
+    color: #000;
+    background-color: springgreen;
+    border-radius: 25px;
+    cursor: pointer;
   }
 </style>

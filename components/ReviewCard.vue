@@ -41,8 +41,7 @@ export default {
     'storeId',
   ],
   methods: {
-    async deleteReview(id, index) {
-      console.log(id);
+    async deleteReview(id) {
       confirm("本当にレビューを削除してよろしいでしょうか？")
       const resData = await this.$axios.request({
         method: 'delete',
