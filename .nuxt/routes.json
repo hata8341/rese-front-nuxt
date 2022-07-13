@@ -2,43 +2,50 @@
   {
     "name": "done",
     "path": "/done",
-    "component": "/Users/hatanotaisuke/Desktop/rese-nuxt_laravel/Netlify/rese-frontend/pages/done.vue",
-    "chunkName": "pages/done"
+    "component": "/Users/hatanotaisuke/Desktop/コーチテック/rese-nuxt_laravel/rese_portfolio/rese-front-nuxt/pages/done.vue",
+    "chunkName": "pages/done",
+    "_name": "_ce009590"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "/Users/hatanotaisuke/Desktop/rese-nuxt_laravel/Netlify/rese-frontend/pages/login.vue",
-    "chunkName": "pages/login"
+    "component": "/Users/hatanotaisuke/Desktop/コーチテック/rese-nuxt_laravel/rese_portfolio/rese-front-nuxt/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_7df14dba"
   },
   {
     "name": "mypage",
     "path": "/mypage",
-    "component": "/Users/hatanotaisuke/Desktop/rese-nuxt_laravel/Netlify/rese-frontend/pages/mypage.vue",
-    "chunkName": "pages/mypage"
+    "component": "/Users/hatanotaisuke/Desktop/コーチテック/rese-nuxt_laravel/rese_portfolio/rese-front-nuxt/pages/mypage.vue",
+    "chunkName": "pages/mypage",
+    "_name": "_1586b7f1"
   },
   {
     "name": "register",
     "path": "/register",
-    "component": "/Users/hatanotaisuke/Desktop/rese-nuxt_laravel/Netlify/rese-frontend/pages/register.vue",
-    "chunkName": "pages/register"
+    "component": "/Users/hatanotaisuke/Desktop/コーチテック/rese-nuxt_laravel/rese_portfolio/rese-front-nuxt/pages/register.vue",
+    "chunkName": "pages/register",
+    "_name": "_9721ee4e"
   },
   {
     "name": "thanks",
     "path": "/thanks",
-    "component": "/Users/hatanotaisuke/Desktop/rese-nuxt_laravel/Netlify/rese-frontend/pages/thanks.vue",
-    "chunkName": "pages/thanks"
+    "component": "/Users/hatanotaisuke/Desktop/コーチテック/rese-nuxt_laravel/rese_portfolio/rese-front-nuxt/pages/thanks.vue",
+    "chunkName": "pages/thanks",
+    "_name": "_e7d50502"
   },
   {
     "name": "detail-id",
     "path": "/detail/:id?",
-    "component": "/Users/hatanotaisuke/Desktop/rese-nuxt_laravel/Netlify/rese-frontend/pages/detail/_id.vue",
-    "chunkName": "pages/detail/_id"
+    "component": "/Users/hatanotaisuke/Desktop/コーチテック/rese-nuxt_laravel/rese_portfolio/rese-front-nuxt/pages/detail/_id.vue",
+    "chunkName": "pages/detail/_id",
+    "_name": "_17878d32"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/hatanotaisuke/Desktop/rese-nuxt_laravel/Netlify/rese-frontend/pages/index.vue",
-    "chunkName": "pages/index"
+    "component": "/Users/hatanotaisuke/Desktop/コーチテック/rese-nuxt_laravel/rese_portfolio/rese-front-nuxt/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_114093e8"
   }
 ]

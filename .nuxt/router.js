@@ -4,13 +4,13 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _41104852 = () => interopDefault(import('../pages/done.vue' /* webpackChunkName: "pages/done" */))
-const _49940664 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
-const _c2e09a60 = () => interopDefault(import('../pages/mypage.vue' /* webpackChunkName: "pages/mypage" */))
-const _1f24c7f8 = () => interopDefault(import('../pages/register.vue' /* webpackChunkName: "pages/register" */))
-const _151e785e = () => interopDefault(import('../pages/thanks.vue' /* webpackChunkName: "pages/thanks" */))
-const _a86bfede = () => interopDefault(import('../pages/detail/_id.vue' /* webpackChunkName: "pages/detail/_id" */))
-const _7fec634d = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _ce009590 = () => interopDefault(import('../pages/done.vue' /* webpackChunkName: "pages/done" */))
+const _7df14dba = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
+const _1586b7f1 = () => interopDefault(import('../pages/mypage.vue' /* webpackChunkName: "pages/mypage" */))
+const _9721ee4e = () => interopDefault(import('../pages/register.vue' /* webpackChunkName: "pages/register" */))
+const _e7d50502 = () => interopDefault(import('../pages/thanks.vue' /* webpackChunkName: "pages/thanks" */))
+const _17878d32 = () => interopDefault(import('../pages/detail/_id.vue' /* webpackChunkName: "pages/detail/_id" */))
+const _114093e8 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -25,31 +25,31 @@ export const routerOptions = {
 
   routes: [{
     path: "/done",
-    component: _41104852,
+    component: _ce009590,
     name: "done"
   }, {
     path: "/login",
-    component: _49940664,
+    component: _7df14dba,
     name: "login"
   }, {
     path: "/mypage",
-    component: _c2e09a60,
+    component: _1586b7f1,
     name: "mypage"
   }, {
     path: "/register",
-    component: _1f24c7f8,
+    component: _9721ee4e,
     name: "register"
   }, {
     path: "/thanks",
-    component: _151e785e,
+    component: _e7d50502,
     name: "thanks"
   }, {
     path: "/detail/:id?",
-    component: _a86bfede,
+    component: _17878d32,
     name: "detail-id"
   }, {
     path: "/",
-    component: _7fec634d,
+    component: _114093e8,
     name: "index"
   }],
 
