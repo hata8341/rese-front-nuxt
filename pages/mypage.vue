@@ -201,12 +201,6 @@ export default {
       reserves:[],
       myStores:[],
       userId:null,
-      // dateSelected:null,
-      // timeSelected:null,
-      // numberSelected:'',
-      // numberOptions: [
-      // ],
-      // disableHours:[]
     }
   },
   methods: {

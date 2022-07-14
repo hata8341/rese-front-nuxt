@@ -151,7 +151,7 @@ export default {
 }
 
 .icon {
-  font-size: 50px;
+  font-size: 3rem;
   margin-top: 6px;
 }
 .guest-button-wrap{

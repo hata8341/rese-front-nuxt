@@ -108,7 +108,7 @@ export default {
   justify-content: flex-end;
 }
 svg.clear {
-  font-size: 40px;
+  font-size: 2.5rem;
   cursor: pointer;
 }
 .all-card-wrap {

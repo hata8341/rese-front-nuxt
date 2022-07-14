@@ -1,5 +1,4 @@
 const ENV = require("dotenv").config().parsed;
-// const { NODE_ENV } = process.env;
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -64,7 +63,7 @@ export default {
   },
   axios: {
     baseURL: "https://rese-back-api.herokuapp.com/api/v1",
-    // baseURL: process.env.API_URL,
+    // baseURL: ENV.API_BASE_URL,
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

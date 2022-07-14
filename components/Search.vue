@@ -110,7 +110,7 @@ export default {
 	border: none;
 }
 .icon {
-  font-size: 40px;
+  font-size: 2.5rem;
   background-color: white;
 }
 </style>

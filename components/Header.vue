@@ -131,11 +131,14 @@ a{
 }
 header {
   height: 70px;
+  display: flex;
 }
 .title {
   width: 50%;
   height: auto;
   margin-left: 100px;
+  display: flex;
+  align-items: center;
 }
 .title h2 {
   font-size: 32px;

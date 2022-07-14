@@ -133,7 +133,7 @@ export default {
     border-radius: 0 0 5px 5px;
   }
   .icon {
-    font-size: 50px;
+    font-size: 3rem;
     margin-top: 6px;
   }
 </style>
