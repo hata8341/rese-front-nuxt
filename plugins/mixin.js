@@ -1,15 +1,12 @@
-import Vue from 'vue'
+import Vue from "vue";
 
 Vue.mixin({
   data() {
     return {
-      dateSelected:null,
+      dateSelected: null,
       timeSelected: null,
-      // timeOptions: [],
-      numberSelected:'',
-      numberOptions: [
-      ],
-    }
-  }
-})
-
+      numberSelected: "",
+      numberOptions: [],
+    };
+  },
+});

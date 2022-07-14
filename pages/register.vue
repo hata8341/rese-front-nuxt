@@ -4,38 +4,42 @@
       <div class="content-title blue">
         <h2>新規登録</h2>
       </div>
-
+      <!-- アイコンをdivで囲む -->
       <validation-observer ref="obs" v-slot="ObserverProps">
         <validation-provider v-slot="{errors}" rules="required">
           <div class="list">
-            <font-awesome-icon icon="user" class="icon" />
+            <div class="icon-wrap">
+              <font-awesome-icon icon="user" class="icon" />
+            </div>
             <input type="text" v-model="
             user_name" name="名前" placeholder="ユーザーネーム">
-            </div>
-            <div class="error">{{errors[0]}}</div>
+          </div>
+          <div class="error">{{errors[0]}}</div>
         </validation-provider>
         <validation-provider v-slot="{errors}" rules="required|email">
           <div class="list">
-            <font-awesome-icon icon="envelope" class="icon" />
+            <div class="icon-wrap">
+              <font-awesome-icon icon="envelope" class="icon" />
+            </div>
             <input type="email" v-model="email" name="メールアドレス" placeholder="メールアドレス">
           </div>
           <div class="error">{{errors[0]}}</div>
         </validation-provider>
         <validation-provider v-slot="{errors}" rules="required|min:8">
           <div class="list">
-            <font-awesome-icon icon="lock" class="icon" />
+            <div class="icon-wrap">
+              <font-awesome-icon icon="lock" class="icon" />
+            </div>
             <input type="password" v-model="password" name="パスワード" placeholder="パスワード">
           </div>
           <div class="error">{{errors[0]}}</div>
         </validation-provider>
-      <div class="button-wrap">
-        <button @click="register"
-                :disabled="ObserverProps.invalid || !ObserverProps.validated"
-                >登録</button>
-      </div>
+        <div class="button-wrap">
+          <button @click="register" :disabled="ObserverProps.invalid || !ObserverProps.validated">登録</button>
+        </div>
         <p v-show="ObserverProps.invalid || !ObserverProps.validated" class="invalid">
           全ての項目を入力すると登録できます
-          </p>
+        </p>
       </validation-observer>
     </div>
   </div>
@@ -96,7 +100,9 @@ export default {
   .list {
     display: flex;
     width: 90%;
-    justify-content: space-around;
+    height: 60px;
+    justify-content: space-evenly;
+    align-items: center;
   }
   .list img {
     margin-top: 15px;
@@ -132,8 +138,13 @@ export default {
     margin-bottom: 15px;
     border-radius: 0 0 5px 5px;
   }
+  .icon-wrap{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+  }
   .icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-top: 6px;
   }
 </style>
