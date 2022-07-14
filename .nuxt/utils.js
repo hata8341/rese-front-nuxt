@@ -200,7 +200,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"NODE_ENV":"development","ENV":{"API_BASE_URL":"http://localhost:8000/api/v1"}}
+      env: {"ENV":{"API_BASE_URL":"https://rese-back-api.herokuapp.com/api/v1"}}
     }
     // Only set once
 
