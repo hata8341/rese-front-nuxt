@@ -63,7 +63,7 @@ export default {
     ENV,
   },
   axios: {
-    baseURL:ENV.API_BASE_URL,
+    baseURL: "https://rese-back-api.herokuapp.com/api/v1",
     // baseURL: process.env.API_URL,
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
