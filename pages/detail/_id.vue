@@ -193,7 +193,6 @@ export default {
     },
     async getReservedDatetime() {
       const sendDate = this.dateSelected;
-      console.log(sendDate);
       this.$store.dispatch('getReservedDatetime',
       {
         store_id: this.$route.params.id,
@@ -227,7 +226,6 @@ export default {
 <style scoped>
 .container-2 {
   width: 100%;
-  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
 }
@@ -249,9 +247,6 @@ export default {
   height: 25px;
   margin-right: 15px;
 }
-.img-wrap {
-  /* border: 1px solid red; */
-}
 .img-wrap img {
   border-radius: 5px 5px 0 0;
   max-width: 100%;
@@ -272,7 +267,6 @@ export default {
 }
 .right {
   margin: 25px 0;
-  /* border: solid 1px blue; */
   width: 47%;
   background: blue;
   border-radius: 5px;
@@ -329,7 +323,6 @@ export default {
   margin-top:20px;
   padding: 10px;
   text-align: center;
-  /* background-color: darkblue; */
   cursor: pointer;
 }
 .reserve-button:hover {

@@ -11,7 +11,6 @@
 
 <script>
 export default {
-  layout: 'default',
   methods: {
     toDetail() {
       this.$router.back();

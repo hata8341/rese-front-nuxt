@@ -239,7 +239,6 @@ export default {
         "/reserve/"+this.$auth.user.id
       );
       const reserves = resData.data;
-      console.log(reserves);
       this.reserves = reserves;
     },
     async updateReserve(id,index) {
@@ -248,7 +247,6 @@ export default {
                 const date = this.dateSelected;
                 const time = this.timeSelected;
                 const updateDatetime = this.$moment(`${date} ${time}`, 'YYYY-MM-DD HH:mm').format('YYYY-MM-DD HH:mm');
-                console.log(updateDatetime);
                 await this.$axios.put("/reserve/" + id,
               {
                 datetime: updateDatetime,
@@ -286,7 +284,6 @@ export default {
     },
     async getHasLike(stores) {
       for (let i = 0; i < stores.length; i++) {
-        console.log(stores[i]);
         const resData = await this.$axios.get( "/like",
           {
             params: {
@@ -301,7 +298,6 @@ export default {
     },
     async getReservedDatetime(storeId) {
       const sendDate = this.dateSelected;
-      console.log(sendDate);
       this.$store.dispatch('getReservedDatetime',
       {
         store_id: storeId,
@@ -345,7 +341,6 @@ export default {
 <style scoped>
 .mypage-wrap {
   width: 100%;
-  /* border: 1px solid green; */
   display: flex;
   justify-content: space-between;
 }
@@ -353,7 +348,6 @@ export default {
   margin-top: 50px;
   width: 47%;
   height: auto;
-  /* border: magenta solid 1px; */
 }
 .reserve-status {
   width: 100%;

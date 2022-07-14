@@ -54,7 +54,6 @@ export default {
             return store.genre.genre_name.indexOf(this.genre) > -1
           });
         }
-        console.log(data);
         return data;
     },
   },
@@ -68,13 +67,11 @@ export default {
       const resData = await this.$axios.get(
           "/store"
       );
-      console.log(resData.data.data);
       const stores = resData.data.data;
       return stores;
     },
     async getHasLike(stores) {
       for (let i = 0; i < stores.length; i++) {
-        console.log(stores[i]);
         const resData = await this.$axios.get( "/like",
           {
             params: {
@@ -83,12 +80,9 @@ export default {
             },
           }
         );
-        console.log(resData.data);
         stores[i].hasLike = resData.data.state;
-        console.log(stores[i].hasLike);
       }
       this.stores = stores;
-      console.log(stores);
     },
     getUser() {
       this.userId = this.$auth.user.id;
