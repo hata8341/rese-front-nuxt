@@ -4,7 +4,6 @@
       <div class="content-title blue">
         <h2>新規登録</h2>
       </div>
-      <!-- アイコンをdivで囲む -->
       <validation-observer ref="obs" v-slot="ObserverProps">
         <validation-provider v-slot="{errors}" rules="required">
           <div class="list">

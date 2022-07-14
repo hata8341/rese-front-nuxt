@@ -1,23 +1,14 @@
 <template>
   <div class="container">
     <div class="search-wrap">
-      <Search
-      :area="area"
-      @update:area="area = $event"
-      :genre="genre"
-      @update:genre="genre = $event"
-      :keyword="keyword"
-      @update:keyword="keyword = $event"
-      />
-      <font-awesome-icon icon="times-circle" class="clear"
-      @click="clearSearch()"
-      />
+      <Search :area="area" @update:area="area = $event" :genre="genre" @update:genre="genre = $event" :keyword="keyword"
+        @update:keyword="keyword = $event" />
+      <div class="icon-wrap">
+        <font-awesome-icon icon="times-circle" class="clear" @click="clearSearch()" />
+      </div>
     </div>
     <div class="all-card-wrap">
-      <Card
-        :setStores="setStores"
-        :userId="userId"
-        />
+      <Card :setStores="setStores" :userId="userId" />
     </div>
   </div>
 </template>
@@ -106,6 +97,11 @@ export default {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+.icon-wrap {
+  width: 50px;
+  height: 50px;
+  text-align: center;
 }
 svg.clear {
   font-size: 2.5rem;
