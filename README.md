@@ -1,6 +1,6 @@
 # rese-frontend
 ## Description
-飲食店予約アプリです。プログラミングスクールの最終課題として作成しました。
+飲食店予約アプリです。
 - Nuxt.js
 - Laravel
 - Myspl
